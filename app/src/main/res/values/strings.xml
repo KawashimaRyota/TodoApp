@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="option_sort">並べ替え</string>
+    <string name="sw_notify_limit">TODO期限を通知する</string>
+    <string name="tv_notification_time">通知時刻</string>
+    <string name="tv_task_name">タスク名</string>
+    <string name="tv_limit">期限</string>
+    <string name="tv_memo">メモ</string>
+    <string name="bt_create">作成</string>
+    <string name="bt_save">保存</string>
+    <string name="bt_delete">タスクを削除</string>
+    <string name="bt_ok">OK</string>
+    <string name="bt_cancel">キャンセル</string>
+    <string-array name="lv_sort_menu">
+        <item>名前 （昇順）</item>
+        <item>名前 （降順）</item>
+        <item>期限 （昇順）</item>
+        <item>期限 （降順）</item>
+        <item>登録日時 （昇順）</item>
+        <item>登録日時 （降順）</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
