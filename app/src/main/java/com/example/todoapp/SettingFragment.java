@@ -31,8 +31,14 @@ public class SettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // フラグメントで使うレイアウトをxmlからインフレート
-        View view = inflater.inflate(R.layout.fragment_unfinished_to_do, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_setting, container, false);
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        //アクションバーのタイトルを変更
+        _parentActivity.setTitle(R.string.title_setting);
+        super.onResume();
     }
 }
