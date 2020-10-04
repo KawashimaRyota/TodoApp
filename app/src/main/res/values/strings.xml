@@ -3,6 +3,8 @@
     <string name="title_unfinished">未完了のTODO</string>
     <string name="title_finished">完了済みのTODO</string>
     <string name="title_setting">設定</string>
+    <string name="title_edit_todo">編集</string>
+    <string name="title_add_todo">新規作成</string>
     <string name="option_sort">並べ替え</string>
     <string name="sw_notify_limit">TODO期限を通知する</string>
     <string name="tv_notification_time">通知時刻</string>

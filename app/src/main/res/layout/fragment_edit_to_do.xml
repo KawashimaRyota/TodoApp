@@ -10,9 +10,16 @@
     <include
         layout="@layout/todo_edit"/>
     <Button
-        android:id="@+id/btCreate"
+        android:id="@+id/btSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bt_create"
+        android:text="@string/bt_save"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/btDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/bt_delete"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>

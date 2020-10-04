@@ -1,21 +1,18 @@
 package com.example.todoapp;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * 新規ToDo追加フラグメント
+ * ToDo編集画面のフラグメント
  */
-public class AddToDoFragment extends Fragment {
+public class EditToDoFragment extends Fragment {
 
     /**
      * このフラグメントが所属するアクティビティオブジェクト
@@ -33,7 +30,14 @@ public class AddToDoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // フラグメントで使うレイアウトをxmlからインフレート
-        View view = inflater.inflate(R.layout.fragment_add_to_do, container, false);
+        View view = inflater.inflate(R.layout.fragment_edit_to_do, container, false);
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        //アクションバーのタイトルを変更
+        _parentActivity.setTitle(R.string.title_edit_todo);
+        super.onResume();
     }
 }

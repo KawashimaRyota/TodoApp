@@ -1,6 +1,7 @@
 package com.example.todoapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,7 +11,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * 完了済ToDoリストのフラグメント
@@ -28,7 +32,6 @@ public class FinishedToDoFragment extends Fragment {
         super.onCreate(savedInstanceState);
         //所属するアクティビティオブジェクトの取得
         _parentActivity = getActivity();
-
     }
 
     @Override
@@ -38,6 +41,10 @@ public class FinishedToDoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_finished_to_do, container, false);
         //オプションメニューの有効化
         setHasOptionsMenu(true);
+
+        // 新規ToDo追加ボタンのリスナクラス登録
+        FloatingActionButton btAdd = view.findViewById(R.id.btAddToDo);
+        btAdd.setOnClickListener(new AddListener());
         return view;
     }
 
@@ -48,5 +55,18 @@ public class FinishedToDoFragment extends Fragment {
 
         //アクションバーのタイトルを変更
         _parentActivity.setTitle(R.string.title_finished);
+    }
+
+    /**
+     * 新規ToDo作成ボタンのリスナクラス
+     */
+    private class AddListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            // 新規ToDo作成画面の起動
+            Intent intent = new Intent(_parentActivity, AddTodoActivity.class);
+            startActivity(intent);
+        }
     }
 }
