@@ -33,11 +33,4 @@ public class EditToDoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_edit_to_do, container, false);
         return view;
     }
-
-    @Override
-    public void onResume() {
-        //アクションバーのタイトルを変更
-        _parentActivity.setTitle(R.string.title_edit_todo);
-        super.onResume();
-    }
 }
